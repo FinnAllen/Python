@@ -1,13 +1,15 @@
+# @author: Finnian Allen
+
 import bs4 as bs
 import urllib.request
 
 # our url to scrape from
 source = urllib.request.urlopen('https://pythonprogramming.net/parsememcparseface/').read()
 
-# the object
-soup = bs.BeautifulSoup(source,'lxml')
+# creates the object "soup" which stores the source and lxml
+soup = bs.BeautifulSoup(source, 'lxml')
 
-# the title of the page
+# gets the title of the page
 print(soup.title)
 
 # get attributes:
